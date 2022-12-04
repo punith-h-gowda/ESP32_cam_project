@@ -1,0 +1,51 @@
+Source : https://randomnerdtutorials.com/esp32-cam-take-photo-save-microsd-card/
+
+ESP32-CAM Take Photo and Save to MicroSD Card
+
+///Parts Required///
+ESP32-CAM with OV2640 – read Best ESP32-CAM Dev Boards
+MicroSD card
+FTDI programmer
+Female-to-female jumper wires
+5V power supply for ESP32-CAM or power bank (optional)
+
+
+///Project Overview///
+Here is Here is a quick overview on how the project works.
+
+The ESP3The ESP32-CAM is in deep sleep mode
+Press thPress the RESET button to wake up the board
+The cameThe camera takes a photo
+The photThe photo is saved in the microSD card with the name: pictureX.jpg, where X corresponds to the picture number
+The pictThe picture number will be saved in the ESP32 flash memory so that it is not erased during RESET and we can keep track of the number of photos taken.
+
+Step 1 : Formatting MicroSD Card
+
+Step2 : Installing thre Esp32 add-on
+We'll program the ESP32 board using Arduino IDE.
+Add this link to preferences in Arduino IDE : https://dl.espressif.com/dl/package_esp32_index.json
+
+////Uploading Code///
+
+##Many FTDI programmers have a jumper that allows you to select 3.3V or 5V. Make sure the jumper is in the right place to select 5V.
+/////
+Important: GPIO 0 needs to be connected to GND so that you’re able to upload code.
+/////
+
+##To upload the code, follow the next steps:
+
+1) Go to Tools > Board and select AI-Thinker ESP32-CAM.
+
+2) Go to Tools > Port and select the COM port the ESP32 is connected to.
+
+3) Then, click the upload button to upload the code.
+
+4) When you start to see these dots on the debugging window as shown below, press the ESP32-CAM on-board RST button.
+
+After Uploading remove the jumper wire between GND and GPI0 pin
+
+Check the Arduino IDE Serial Monitor window to see if everything is working as expected. As you can see, the picture was successfully saved in the microSD card.
+
+##After making sure that everything is working as expected, you can disconnect the ESP32-CAM from the FTDI programmer and power it using an independent power supply.
+
+##To see the photos taken, remove the microSD card from the microSD card slot and insert it into your computer. You should have all the photos saved.
