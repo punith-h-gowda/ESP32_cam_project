@@ -49,3 +49,28 @@ Check the Arduino IDE Serial Monitor window to see if everything is working as e
 ##After making sure that everything is working as expected, you can disconnect the ESP32-CAM from the FTDI programmer and power it using an independent power supply.
 
 ##To see the photos taken, remove the microSD card from the microSD card slot and insert it into your computer. You should have all the photos saved.
+
+
+
+////TFT eSPI display ILI9225////
+
+Required Libraries
+
+1)TFT_eSPI
+2}TJpg_Decoder
+
+NOTE: Changing TFT display according to Driver
+Go to TFT_eSPI library edit User setup
+
+select Driver ILI9225
+change pins selection
+SDA == MOSI
+CLK == SCLK
+RS == DC
+
+#define TFT_MOSI 15 // In some display driver board, it might be written as "SDA" and so on.
+#define TFT_SCLK 14
+#define TFT_CS   2  // Chip select control pin
+#define TFT_DC   12  // Data Command control pin
+#define TFT_RST  13  // Reset pin (could connect to Arduino RESET pin)
+//#define TFT_BL   22  // LED back-light
