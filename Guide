@@ -1,6 +1,5 @@
-Source : https://randomnerdtutorials.com/esp32-cam-take-photo-save-microsd-card/
 
-ESP32-CAM Take Photo and Save to MicroSD Card
+ESP32-CAM Take Photo 
 
 ///Parts Required///
 ESP32-CAM with OV2640 – read Best ESP32-CAM Dev Boards
@@ -11,15 +10,6 @@ Female-to-female jumper wires
 
 
 ///Project Overview///
-Here is Here is a quick overview on how the project works.
-
-The ESP3The ESP32-CAM is in deep sleep mode
-Press thPress the RESET button to wake up the board
-The cameThe camera takes a photo
-The photThe photo is saved in the microSD card with the name: pictureX.jpg, where X corresponds to the picture number
-The pictThe picture number will be saved in the ESP32 flash memory so that it is not erased during RESET and we can keep track of the number of photos taken.
-
-Step 1 : Formatting MicroSD Card
 
 Step2 : Installing thre Esp32 add-on
 We'll program the ESP32 board using Arduino IDE.
@@ -70,7 +60,7 @@ RS == DC
 
 #define TFT_MOSI 15 // In some display driver board, it might be written as "SDA" and so on.
 #define TFT_SCLK 14
-#define TFT_CS   2  // Chip select control pin
+#define TFT_CS   1  // Chip select control pin
 #define TFT_DC   12  // Data Command control pin
 #define TFT_RST  13  // Reset pin (could connect to Arduino RESET pin)
-//#define TFT_BL   22  // LED back-light
+
