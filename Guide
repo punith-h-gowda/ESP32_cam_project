@@ -11,7 +11,7 @@ Female-to-female jumper wires
 
 ///Project Overview///
 
-Step2 : Installing thre Esp32 add-on
+Step2 : Installing the Esp32 add-on
 We'll program the ESP32 board using Arduino IDE.
 Add this link to preferences in Arduino IDE : https://dl.espressif.com/dl/package_esp32_index.json
 
